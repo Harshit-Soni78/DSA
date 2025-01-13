@@ -18,3 +18,14 @@ Patterns -> Nested Loops
 Link - <https://takeuforward.org/strivers-a2z-dsa-course/must-do-pattern-problems-before-starting-dsa/>
 
 ## Lec-3
+
+Learn about C++ STL
+
+- Containers
+- Iterators
+- Functions
+- Algorithms
+
+Video Link :- <https://www.youtube.com/watch?v=RRVYpIET_RU&ab_channel=takeUforward>
+
+Artical Link :- <https://takeuforward.org/c/c-stl-tutorial-most-frequent-used-stl-containers/>

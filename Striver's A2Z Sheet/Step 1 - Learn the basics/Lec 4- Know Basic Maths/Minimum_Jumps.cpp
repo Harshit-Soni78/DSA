@@ -18,45 +18,43 @@ using namespace std;
 
 int minJumps(vector<int> &arr)
 {
-    int maxReach = 0, flag = 0;
+    int maxReach = 0, lastIndex = 0;
     int n = arr.size(), jump = 0;
-    if(n == 1) return 1;
+
+    if (n == 1)
+        return 0;
+
     for (int i = 0; i < n; i++)
     {
-        maxReach = max(maxReach , i + arr[maxReach]);
-        
-        if(i == flag){
-            if(maxReach == i)
-            {   
+        maxReach = max(maxReach, i + arr[i]);
+        if (i == lastIndex)
+        {
+            if (maxReach == i)
+            {
                 jump = -1;
                 break;
             }
-            flag = maxReach;
+            lastIndex = maxReach;
             jump++;
-            if(maxReach >= n-1){
+            if (maxReach >= n - 1)
+            {
                 break;
             }
         }
-
-        // if(i > maxReach) jump = -1;
-        // if(flag == i){
-        //     flag = maxReach;
-        //     jump++;
-        // }
     }
     return jump;
-    
 }
 
 int main(int argc, char const *argv[])
 {
-    
+
     vector<int> arr = {9, 10, 1, 2, 3, 4, 8, 0, 0, 0, 0, 0, 0, 0, 1};
     vector<int> arr2 = {1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9};
-    cout << minJumps(arr)<<endl;
-    cout<<arr.size()<<endl<<endl;
-    cout << minJumps(arr2)<<endl;
-    cout<<arr2.size()<<endl;
+    cout << minJumps(arr) << endl;
+    cout << arr.size() << endl
+         << endl;
+    cout << minJumps(arr2) << endl;
+    cout << arr2.size() << endl;
 
     return 0;
 }
